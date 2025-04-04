@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
+// Get the current directory from the module URL
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 // Ensure the dist directory exists
 const distDir = path.join(__dirname, 'dist');
 if (!fs.existsSync(distDir)) {
