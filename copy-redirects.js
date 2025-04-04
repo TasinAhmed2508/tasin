@@ -1,6 +1,5 @@
-// Script to copy _redirects file to the build output
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Ensure the dist directory exists
 const distDir = path.join(__dirname, 'dist');
@@ -23,4 +22,4 @@ try {
   }
 } catch (err) {
   console.error('Error copying _redirects file:', err);
-} 
+}
