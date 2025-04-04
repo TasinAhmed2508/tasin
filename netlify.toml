@@ -19,7 +19,11 @@
 
 # Cache plugin to prevent build failures
 [[plugins]]
-  package = "@netlify/plugin-cache"
+  package = "netlify-plugin-cache"  # Corrected package name
+
+  [plugins.inputs]
+    # Specify paths you want to cache
+    paths = ["node_modules", ".vite", "dist"]
 
 # Enable caching for better performance
 [[headers]]
